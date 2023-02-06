@@ -1,12 +1,502 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fix Movie</title>
-</head>
-<body>
-    
-</body>
+    <!-- My CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Icon -->
+    <link rel="shortcut icon" href="img/fix-movie.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <header>
+      <div class="title-logo">
+          <p>FIX<span style="font-weight: 6">MOVIE</span></p>
+          <div class="hamburger-nav-button">
+          <button onclick="showHamburgerMenu()">
+            <img src="img/hamburger-icon.svg" alt="Icon Hamburger" />
+          </button>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li>
+            <a href="#home" class="nav-active" onclick="setActiveMenu()">
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="#trending" onclick="setActiveMenu()"> Trending </a>
+          </li>
+          <li>
+            <a href="#popular" onclick="setActiveMenu()"> Popular </a>
+          </li>
+          <li>
+            <a href="#toprated" onclick="setActiveMenu()"> Top Rated </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="button-search">
+        <input type="text" placeholder="Search Movie" />
+        <button type="submit">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-search"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+            ></path>
+          </svg>
+        </button>
+      </div>
+      <div class="list-menu-hamburger">
+        <nav>
+          <ul>
+            <li>
+              <a href="#home" class="nav-active" onclick="setActiveMenu()">
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="#trending" onclick="setActiveMenu()"> Trending </a>
+            </li>
+            <li>
+              <a href="#popular" onclick="setActiveMenu()"> Popular </a>
+            </li>
+            <li>
+              <a href="#toprated" onclick="setActiveMenu()"> Top Rated </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+        <section id="home">
+        <div class="slider">
+          <div class="slider-content">
+            <button class="slider-btn-left">
+              <img src="img/left.svg" alt="Left Button" />
+            </button>
+            <div class="slider-feature">
+              <h1 class="slider-title"></h1>
+              <div class="container-rating">
+                <img src="img/star.svg" alt="Rating star" style="width: 20px" />
+                <p class="slider-rating"></p>
+              </div>
+              <time class="slider-date"></time>
+            </div>
+            <button class="slider-btn-right">
+              <img src="img/right.svg" alt="Right Button" />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section id="trending">
+        <h2>Trending</h2>
+        <ul class="cards">
+          <div class="wrapper-card">
+            <li class="card">
+              <div>
+                <div class="card-content">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Laborum animi ex sit reiciendis, commodi quibusdam. Nostrum
+                    magnam unde numquam ex quod illo totam, earum reprehenderit,
+                    neque quo et quas inventore. Lorem ipsum dolor sit, amet
+                    consectetur adipisicing elit. Accusamus molestias, ipsam
+                    nisi praesentium possimus voluptas molestiae tempore
+                    perferendis laudantium sit alias laboriosam, animi fugit
+                    voluptates dignissimos qui earum eaque quo!
+                  </p>
+                </div>
+              </div>
+            </li>
+            <h3 class="card-title">Puss in Boots: The Last Wish</h3>
+            <div class="container-rating">
+              <img src="img/star.svg" alt="Rating star" style="width: 20px" />
+              <p>8/10</p>
+            </div>
+          </div>
+          <div class="wrapper-card">
+            <li class="card">
+              <div>
+                <div class="card-content">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Laborum animi ex sit reiciendis, commodi quibusdam. Nostrum
+                    magnam unde numquam ex quod illo totam, earum reprehenderit,
+                    neque quo et quas inventore. Lorem ipsum dolor sit, amet
+                    consectetur adipisicing elit. Accusamus molestias, ipsam
+                    nisi praesentium possimus voluptas molestiae tempore
+                    perferendis laudantium sit alias laboriosam, animi fugit
+                    voluptates dignissimos qui earum eaque quo!
+                  </p>
+                </div>
+              </div>
+            </li>
+            <h3 class="card-title">Puss in Boots: The Last Wish</h3>
+            <div class="container-rating">
+              <img src="img/star.svg" alt="Rating star" style="width: 20px" />
+              <p>8/10</p>
+            </div>
+          </div>
+          <div class="wrapper-card">
+            <li class="card">
+              <div>
+                <div class="card-content">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Laborum animi ex sit reiciendis, commodi quibusdam. Nostrum
+                    magnam unde numquam ex quod illo totam, earum reprehenderit,
+                    neque quo et quas inventore. Lorem ipsum dolor sit, amet
+                    consectetur adipisicing elit. Accusamus molestias, ipsam
+                    nisi praesentium possimus voluptas molestiae tempore
+                    perferendis laudantium sit alias laboriosam, animi fugit
+                    voluptates dignissimos qui earum eaque quo!
+                  </p>
+                </div>
+              </div>
+            </li>
+            <h3 class="card-title">Puss in Boots: The Last Wish</h3>
+            <div class="container-rating">
+              <img src="img/star.svg" alt="Rating star" style="width: 20px" />
+              <p>8/10</p>
+            </div>
+          </div>
+          <div class="wrapper-card">
+            <li class="card">
+              <div>
+                <div class="card-content">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Laborum animi ex sit reiciendis, commodi quibusdam. Nostrum
+                    magnam unde numquam ex quod illo totam, earum reprehenderit,
+                    neque quo et quas inventore. Lorem ipsum dolor sit, amet
+                    consectetur adipisicing elit. Accusamus molestias, ipsam
+                    nisi praesentium possimus voluptas molestiae tempore
+                    perferendis laudantium sit alias laboriosam, animi fugit
+                    voluptates dignissimos qui earum eaque quo!
+                  </p>
+                </div>
+              </div>
+            </li>
+            <h3 class="card-title">Puss in Boots: The Last Wish</h3>
+            <div class="container-rating">
+              <img src="img/star.svg" alt="Rating star" style="width: 20px" />
+              <p>8/10</p>
+            </div>
+          </div>
+          <div class="wrapper-card">
+            <li class="card">
+              <div>
+                <div class="card-content">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Laborum animi ex sit reiciendis, commodi quibusdam. Nostrum
+                    magnam unde numquam ex quod illo totam, earum reprehenderit,
+                    neque quo et quas inventore. Lorem ipsum dolor sit, amet
+                    consectetur adipisicing elit. Accusamus molestias, ipsam
+                    nisi praesentium possimus voluptas molestiae tempore
+                    perferendis laudantium sit alias laboriosam, animi fugit
+                    voluptates dignissimos qui earum eaque quo!
+                  </p>
+                </div>
+              </div>
+            </li>
+            <h3 class="card-title">Puss in Boots: The Last Wish</h3>
+            <div class="container-rating">
+              <img src="img/star.svg" alt="Rating star" style="width: 20px" />
+              <p>8/10</p>
+            </div>
+          </div>
+        </ul>
+      </section>
+
+      <section id="popular">
+        <h2>Popular</h2>
+        <ul class="cards">
+          <div class="wrapper-card">
+            <li class="card">
+              <div>
+                <div class="card-content">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Laborum animi ex sit reiciendis, commodi quibusdam. Nostrum
+                    magnam unde numquam ex quod illo totam, earum reprehenderit,
+                    neque quo et quas inventore. Lorem ipsum dolor sit, amet
+                    consectetur adipisicing elit. Accusamus molestias, ipsam
+                    nisi praesentium possimus voluptas molestiae tempore
+                    perferendis laudantium sit alias laboriosam, animi fugit
+                    voluptates dignissimos qui earum eaque quo!
+                  </p>
+                </div>
+              </div>
+            </li>
+            <h3 class="card-title">Puss in Boots: The Last Wish</h3>
+            <div class="container-rating">
+              <img src="img/star.svg" alt="Rating star" style="width: 20px" />
+              <p>8/10</p>
+            </div>
+          </div>
+          <div class="wrapper-card">
+            <li class="card">
+              <div>
+                <div class="card-content">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Laborum animi ex sit reiciendis, commodi quibusdam. Nostrum
+                    magnam unde numquam ex quod illo totam, earum reprehenderit,
+                    neque quo et quas inventore. Lorem ipsum dolor sit, amet
+                    consectetur adipisicing elit. Accusamus molestias, ipsam
+                    nisi praesentium possimus voluptas molestiae tempore
+                    perferendis laudantium sit alias laboriosam, animi fugit
+                    voluptates dignissimos qui earum eaque quo!
+                  </p>
+                </div>
+              </div>
+            </li>
+            <h3 class="card-title">Puss in Boots: The Last Wish</h3>
+            <div class="container-rating">
+              <img src="img/star.svg" alt="Rating star" style="width: 20px" />
+              <p>8/10</p>
+            </div>
+          </div>
+          <div class="wrapper-card">
+            <li class="card">
+              <div>
+                <div class="card-content">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Laborum animi ex sit reiciendis, commodi quibusdam. Nostrum
+                    magnam unde numquam ex quod illo totam, earum reprehenderit,
+                    neque quo et quas inventore. Lorem ipsum dolor sit, amet
+                    consectetur adipisicing elit. Accusamus molestias, ipsam
+                    nisi praesentium possimus voluptas molestiae tempore
+                    perferendis laudantium sit alias laboriosam, animi fugit
+                    voluptates dignissimos qui earum eaque quo!
+                  </p>
+                </div>
+              </div>
+            </li>
+            <h3 class="card-title">Puss in Boots: The Last Wish</h3>
+            <div class="container-rating">
+              <img src="img/star.svg" alt="Rating star" style="width: 20px" />
+              <p>8/10</p>
+            </div>
+          </div>
+          <div class="wrapper-card">
+            <li class="card">
+              <div>
+                <div class="card-content">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Laborum animi ex sit reiciendis, commodi quibusdam. Nostrum
+                    magnam unde numquam ex quod illo totam, earum reprehenderit,
+                    neque quo et quas inventore. Lorem ipsum dolor sit, amet
+                    consectetur adipisicing elit. Accusamus molestias, ipsam
+                    nisi praesentium possimus voluptas molestiae tempore
+                    perferendis laudantium sit alias laboriosam, animi fugit
+                    voluptates dignissimos qui earum eaque quo!
+                  </p>
+                </div>
+              </div>
+            </li>
+            <h3 class="card-title">Puss in Boots: The Last Wish</h3>
+            <div class="container-rating">
+              <img src="img/star.svg" alt="Rating star" style="width: 20px" />
+              <p>8/10</p>
+            </div>
+          </div>
+          <div class="wrapper-card">
+            <li class="card">
+              <div>
+                <div class="card-content">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Laborum animi ex sit reiciendis, commodi quibusdam. Nostrum
+                    magnam unde numquam ex quod illo totam, earum reprehenderit,
+                    neque quo et quas inventore. Lorem ipsum dolor sit, amet
+                    consectetur adipisicing elit. Accusamus molestias, ipsam
+                    nisi praesentium possimus voluptas molestiae tempore
+                    perferendis laudantium sit alias laboriosam, animi fugit
+                    voluptates dignissimos qui earum eaque quo!
+                  </p>
+                </div>
+              </div>
+            </li>
+            <h3 class="card-title">Puss in Boots: The Last Wish</h3>
+            <div class="container-rating">
+              <img src="img/star.svg" alt="Rating star" style="width: 20px" />
+              <p>8/10</p>
+            </div>
+          </div>
+        </ul>
+      </section>
+
+      <section id="toprated">
+        <h2>Top Rated</h2>
+        <ul class="cards">
+          <div class="wrapper-card">
+            <li class="card">
+              <div>
+                <div class="card-content">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Laborum animi ex sit reiciendis, commodi quibusdam. Nostrum
+                    magnam unde numquam ex quod illo totam, earum reprehenderit,
+                    neque quo et quas inventore. Lorem ipsum dolor sit, amet
+                    consectetur adipisicing elit. Accusamus molestias, ipsam
+                    nisi praesentium possimus voluptas molestiae tempore
+                    perferendis laudantium sit alias laboriosam, animi fugit
+                    voluptates dignissimos qui earum eaque quo!
+                  </p>
+                </div>
+              </div>
+            </li>
+            <h3 class="card-title">Puss in Boots: The Last Wish</h3>
+            <div class="container-rating">
+              <img src="img/star.svg" alt="Rating star" style="width: 20px" />
+              <p>8/10</p>
+            </div>
+          </div>
+          <div class="wrapper-card">
+            <li class="card">
+              <div>
+                <div class="card-content">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Laborum animi ex sit reiciendis, commodi quibusdam. Nostrum
+                    magnam unde numquam ex quod illo totam, earum reprehenderit,
+                    neque quo et quas inventore. Lorem ipsum dolor sit, amet
+                    consectetur adipisicing elit. Accusamus molestias, ipsam
+                    nisi praesentium possimus voluptas molestiae tempore
+                    perferendis laudantium sit alias laboriosam, animi fugit
+                    voluptates dignissimos qui earum eaque quo!
+                  </p>
+                </div>
+              </div>
+            </li>
+            <h3 class="card-title">Puss in Boots: The Last Wish</h3>
+            <div class="container-rating">
+              <img src="img/star.svg" alt="Rating star" style="width: 20px" />
+              <p>8/10</p>
+            </div>
+          </div>
+          <div class="wrapper-card">
+            <li class="card">
+              <div>
+                <div class="card-content">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Laborum animi ex sit reiciendis, commodi quibusdam. Nostrum
+                    magnam unde numquam ex quod illo totam, earum reprehenderit,
+                    neque quo et quas inventore. Lorem ipsum dolor sit, amet
+                    consectetur adipisicing elit. Accusamus molestias, ipsam
+                    nisi praesentium possimus voluptas molestiae tempore
+                    perferendis laudantium sit alias laboriosam, animi fugit
+                    voluptates dignissimos qui earum eaque quo!
+                  </p>
+                </div>
+              </div>
+            </li>
+            <h3 class="card-title">Puss in Boots: The Last Wish</h3>
+            <div class="container-rating">
+              <img src="img/star.svg" alt="Rating star" style="width: 20px" />
+              <p>8/10</p>
+            </div>
+          </div>
+          <div class="wrapper-card">
+            <li class="card">
+              <div>
+                <div class="card-content">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Laborum animi ex sit reiciendis, commodi quibusdam. Nostrum
+                    magnam unde numquam ex quod illo totam, earum reprehenderit,
+                    neque quo et quas inventore. Lorem ipsum dolor sit, amet
+                    consectetur adipisicing elit. Accusamus molestias, ipsam
+                    nisi praesentium possimus voluptas molestiae tempore
+                    perferendis laudantium sit alias laboriosam, animi fugit
+                    voluptates dignissimos qui earum eaque quo!
+                  </p>
+                </div>
+              </div>
+            </li>
+            <h3 class="card-title">Puss in Boots: The Last Wish</h3>
+            <div class="container-rating">
+              <img src="img/star.svg" alt="Rating star" style="width: 20px" />
+              <p>8/10</p>
+            </div>
+          </div>
+          <div class="wrapper-card">
+            <li class="card">
+              <div>
+                <div class="card-content">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Laborum animi ex sit reiciendis, commodi quibusdam. Nostrum
+                    magnam unde numquam ex quod illo totam, earum reprehenderit,
+                    neque quo et quas inventore. Lorem ipsum dolor sit, amet
+                    consectetur adipisicing elit. Accusamus molestias, ipsam
+                    nisi praesentium possimus voluptas molestiae tempore
+                    perferendis laudantium sit alias laboriosam, animi fugit
+                    voluptates dignissimos qui earum eaque quo!
+                  </p>
+                </div>
+              </div>
+            </li>
+            <h3 class="card-title">Puss in Boots: The Last Wish</h3>
+            <div class="container-rating">
+              <img src="img/star.svg" alt="Rating star" style="width: 20px" />
+              <p>8/10</p>
+            </div>
+          </div>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <ul>
+        <li>
+          <a href="https://instagram.com" target="_blank">
+            <img src="img/instagram.svg" alt="Instagram Icon" />
+            &nbsp;instagram</a
+          >
+        </li>
+        <li>
+          <a href="https://linkedin.com" target="_blank"
+            ><img src="img/linkedin.svg" alt="linkedin Icon" />
+            &nbsp;linkedin</a
+          >
+        </li>
+        <li>
+          <a href="https://github.com" target="_blank"
+            ><img src="img/github.svg" alt="github Icon" /> &nbsp;github</a
+          >
+        </li>
+      </ul>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
 </html>
